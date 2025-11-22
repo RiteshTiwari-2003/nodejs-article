@@ -46,3 +46,18 @@ unlike traditional servers that block a thread for each requrest , nodejs uses a
 
 ### is it a language or framework?
 Nodejs  is neither a language nor framework , but rather a javascript runtime envoirment that allows developers to run javascript outside of browser .
+
+## some famous npm packages 
+express.js: a popular framework for building web application and APIs,
+mongoose: a package for interacting with mongodb database using an object data modeling (odm) approach.
+axios: a promise based http client for making api request
+react (and React DOM): through originally developed for the browser, react can be installed via npm for building modern web application 
+
+socket.io: enables real time communication between client and servers .
+passport.js: authentication middleware for ndejs
+
+# global and window in nodejs
+Did you know that javascript behave differently in the browser and in nodejs 
+like inspect cick karke jab mai browser me window write karta hu aur hit karta hu to i got a Window object in which many property og object Window object present 
+
+
