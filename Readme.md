@@ -80,3 +80,23 @@ modules in node js are created by defining seperate files for different function
 
 you must export anything you want to make accessable to other modules 
 
+### path module in node js 
+in node js , the path module provides utilities for working with file and directory paths ,
+i is buitin module , so you dont neet to install any external package to use it. 
+spacial  node js constant :
+__filename
+provide the absolute path of the currently executing file 
+__dirname
+provide the absolute directory path of the currently executing file 
+
+const path=require('path')
+console.log(__dirname);
+console.log(__filename);
+const filepath=path.join("folder","student","data.txt")
+console.log(filePath);
+const parsedata=path.parse(filepath);
+const resolvePath=path.resolve(filePath);
+const extname=path.extname(filePath);
+const basename=path.basename(filePath);
+const dirname=path.dirname(filePath);
+
