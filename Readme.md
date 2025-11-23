@@ -61,3 +61,22 @@ Did you know that javascript behave differently in the browser and in nodejs
 like inspect cick karke jab mai browser me window write karta hu aur hit karta hu to i got a Window object in which many property og object Window object present 
 
 
+### module in node js 
+self contained code unit:
+each file in node is treated as a seperate module. 
+variable , functioon or object defined in one file are not accessible in another file by default unless you explicitly export them 
+
+Encapsulation :
+Node js uses the commonJS module sysytem (module.exports and require)
+to ensure the code in one file does not pollute or interfere with the global scope 
+
+this make your code modular  maintainable and easier to debug 
+
+### what exactly is a module in node.js ?
+a module in nodejs represents a file containing code that is self contained , reusable and encapsulated 
+node js uses the commonJS module system 
+this module system came before ES Modules was introduced in javascript, thats why its syntax is diffeerent 
+modules in node js are created by defining seperate files for different functionality  
+
+you must export anything you want to make accessable to other modules 
+
