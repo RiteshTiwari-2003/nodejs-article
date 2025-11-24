@@ -100,3 +100,65 @@ const extname=path.extname(filePath);
 const basename=path.basename(filePath);
 const dirname=path.dirname(filePath);
 
+### os module in node js 
+const os=require('os');
+console.log("platform:",os.platform());
+console.log("User: ",os.userInfo());
+console.log("CPU Architecture:",os.arch());
+console.log("Free Memory:", os.freemem(),"bytes");
+console.log("Total memory",os.totalmem(),"bytes");
+console.log("System uptime:", os.uptime(),"second");
+console.log("Home Directoy:",os.homedir());
+
+## fs module in nodejs
+the fs file system module in node js is a core module that allows you to work with the file system , enbading you to read , write , update , delete and watch file .
+
+lets see how crud uperation in synchronous way 
+fs.writeFileSync(): writes the data to a file, it the file does not exist , it will be created , if the file exists , it overwrite the content .
+
+### write data in file in synchronous way 
+syntex: fs.writeFileSync(filePath,data,options);
+filePath: the file path to write to.
+data: the content to write to the file .
+  const fs=require("fs");
+  const os=require("os");
+const fileName="text.txt";
+const filePath=path.join(__dirname,fileName);
+console.log(__dirname);
+ const writeFile=fs.writeFileSync(filePath,"this is the initial data","utf-8");
+ console.log(writeFile);
+
+### read the data in file in synchronous way
+
+fs.readFileSync(): Reads a file's content and return it as a string or buffer.
+//syntex : const data=fs.readFileSync(filePath,options)
+//filePath:Path of the file to read 
+//options: optional , encoding ('utf-8') to get data as a string 
+
+const fs=require('fs');
+const path=require('path');
+const fileName="test.txt";
+const filePath=path.join(__dirname,fileName); 
+ const readFile=fs.readFileSync(filePath,'utf-8' );
+ console.log(readFile.toString());
+
+  
+
+## like now i want to update data or append something in data 
+fs.appendFileSync(): appends data to a file , if the file does not exist , it create the file 
+syntex: fs.appendFileSync(filePath,data,options);
+// filepath: file path to append to.
+// data: content to add to the file .
+options: optional , encoding options .   
+
+### delete file (fs.unlinkSync()):
+delete a file by its path
+syntex: fs.unlinkSync(filepath);
+
+### rename file (fs.renameSync()): rename a file from one name to another .
+syntex: fs.renameSync(oldPath,newpath)
+//oldPath: current file path .
+// newPath: new filw path or name 
+
+
+  
