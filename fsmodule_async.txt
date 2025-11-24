@@ -1,0 +1,26 @@
+### fs module as asynchronous way 
+const fs=require('fs');
+const path=require('path');
+const fileName="async.txt";
+const filePath=path.join(__dirname,fileName);
+//fs.writeFile() : write data to a file , replacing the file if it already exist.
+// syntex: fs.writeFile(path,data,options,callback);
+//path:filepath to write to .
+//data : content to write to 
+//options: optional specifies encoding ('utf-8') , mode or flag 
+//callback : a function with an error .
+fs.writeFile(filePath,"this is my code",'utf-8',(err)=>{
+    if(err)console.error(err);
+    else console.log("data is saved");
+
+}) 
+
+### read file in async manner 
+
+fs.readFile(path,option,callback): and in read in callback function now i need to pass two parameter err and data when i write the data then in callback only we pass one parameter err but 
+when we read then we need to pass err and data as parameter in callback
+
+fs.readFile(filePath,'utf-8',(err,data)=>{
+    if(err) console.error(err);
+    else console.log(data);
+})
