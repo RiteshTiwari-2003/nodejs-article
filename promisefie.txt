@@ -1,1 +1,6 @@
 ### use promise in file operation crud operation :
+const fs=require('fs');
+const path=require('path');
+const fileName='falne.txt';
+const filePath=path.join(__dirname,fileName);
+fs.promises.readdir(filePath).then((data)=>{console.log(data)}).catch((err)=>{console.error(err)});
