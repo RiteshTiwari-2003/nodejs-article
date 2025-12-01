@@ -4,3 +4,5 @@ const path=require('path');
 const fileName='falne.txt';
 const filePath=path.join(__dirname,fileName);
 fs.promises.readdir(filePath).then((data)=>{console.log(data)}).catch((err)=>{console.error(err)});
+
+// node js is nothing but it is a runtime envoirment like it provide a runtime envoirment for javascript for run outside of browser
