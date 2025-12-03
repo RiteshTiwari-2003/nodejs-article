@@ -1,0 +1,23 @@
+### what is mongo db and why it is used? ?
+mongodb is nosql database , document oriented database that store data in BSON(JSON LIKE) documents.
+it is :
+1. schema -flexible 
+2. horizontally scalable 
+3. good for rapid development and handling unstructured and semi structured data .
+
+### what is collection and what is documents?
+documents: basic unit of data, stored as a json like object .
+collection: a group of document , similar to table in relational db , but without a fix schema 
+
+### what is  mongoose and why it is used with node js ?
+mongoose is an odm (object data modeling) library for mongodb and node js ,
+it define schema and models 
+provide validaton , middleware/hooks 
+makes querying easy with nice api 
+
+example: 
+const UserShema=new mongoose.Schema({
+    name:String,
+    email:{type::String, required:true,unique:true}
+});
+const User=mongoose.model("User",UserSchema);
