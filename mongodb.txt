@@ -21,3 +21,35 @@ const UserShema=new mongoose.Schema({
     email:{type::String, required:true,unique:true}
 });
 const User=mongoose.model("User",UserSchema);
+
+### how do you connect a node js app to mongo db using mongoose ?
+const mongoose=require("mongoose");
+mongoose.connect(process.env.MONGO_URI,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+}).then(()=>{console.log("DB Connected")}).catch(err=>{console.error(err)})
+
+### basic crud operations with mongoose?
+//create
+await User.create({name:"Ritesh",email:"riteshtiwari3112003@gmail.com"});
+//read
+const users=await User.find();
+const user=await User.findById(id);
+//update
+await User.findByIdAndUpdate(id,{name:"upendra"},{new:true})
+//delete 
+await User.findByIdAndDelete(id);
+
+### what are indexs in mongodb ?
+indexes improve query erformance by allowing mongodb to search data more efficiently 
+uses extra storage 
+slow down write operation slightly 
+const UserSchema = new mongoose.Schema({
+  email: { type: String, unique: true, index: true }
+});
+
+### what is difference between find(), findById() and findOne()?
+find(filter) return array of matching documents
+findOne(filter) return the first matching document 
+findById(id) find document by its _id field 
+ 
