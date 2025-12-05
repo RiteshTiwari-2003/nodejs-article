@@ -53,3 +53,18 @@ find(filter) return array of matching documents
 findOne(filter) return the first matching document 
 findById(id) find document by its _id field 
  
+
+ #### mongo db introducton 
+
+ homogeneous data storage refer to a system where all the data is stored in a consistent format:
+ with in a single mongo db collection , the document typically share a largely homogeneous structure , while 
+ mongodb's schema is flexible (document in the dsame collections dont need to have the exact same field or data types), in practice, for efficient querying and data management 
+ developer usually  design 
+ document within a collection to have a consistent set of field and data types
+
+ scale : while relational database do support sharding , mongodb often highlights scalability as a key strenght for several reasons.
+1. architectural difference and design philosphy: 
+schema flexibility : mongodb 's schema -less or flexible schema allows for easier evolution and adaptaion of data structure without the need for complex and potentially disruptive schema migration that 
+can be common in sharded relational database. this flexibility can simplify scaling efforts , espacially 
+when dealing with rapidly changing data requirement 
+
