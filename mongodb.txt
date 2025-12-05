@@ -68,3 +68,13 @@ schema flexibility : mongodb 's schema -less or flexible schema allows for easie
 can be common in sharded relational database. this flexibility can simplify scaling efforts , espacially 
 when dealing with rapidly changing data requirement 
 
+### introduction to nosql 
+
+no sql is a non relational dms(data management system) that is used for distributed data stores with the need of homodeneous data storage 
+
+data type in mongo db:
+structred data  : and in structed data all document have same  field and property 
+unstructured data :in a collection in each document have diffrrent different data andtype of data like different different stucture of each document , like different different field and property in each documents.
+
+semi structured data : in this both structured and unstructured both property present and depending on data source and coming data from source 
+polymorphic data ; depending on data types or subtypes 
