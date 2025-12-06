@@ -148,3 +148,90 @@ mongodb's document model is simple for developers to learn and use.while still p
 so whats happeninternally structure ?
 
 mongo db will not the save the data in json format , internally it saves in the extended json format which is bson format(binary json format) 
+
+#### mongo db tools :
+many mongho db management tools are available in the market , these tools help us in enhancing the productivity of mongo db development and admin tasks 
+nosql booster 
+mongo db compass
+robot3t 
+nosql manager 
+
+
+collections 
+a collection store several documents , it is similer to a table of an redbms and may stote different structured document 
+
+mondo shel download link :
+https://www.mongodb.com/try/download/shell
+mongodb download link:
+https://www.mongodb.com/try/download/community
+mongo compass:
+https://www.mongodb.com/try/download/shell
+
+so first i install mongo shell from first link so when i installed it in terminal you can say or write this command 
+"mongosh"
+and hit enter 
+so when you say mongosh in terminal it connected to mongodb your local mongodb like by default local mongo db mongodb://127.0.0.1:27017..........
+so basically it print the mongo db version and mongo db compass that you are connecting 
+
+in mongo sheel all command and when they run then what output produce all list below:
+
+list all database:
+show dbs 
+
+create/select a database:
+use school
+
+check current database:
+db
+
+show collections in curtrent db:
+show collections
+
+create a collection:
+db.createCollection("students")
+
+insert one document:
+db.students.insertOne({
+  name:"Virat",
+  age:20,
+  subjects:["Math","Physics"]
+})
+
+insert many documents:
+db.students.insertMany([{
+  name:"Sam",
+  age:22,
+  subjects:["Bioogy","Chemistry"]
+},
+{name:"Ramya",
+age:21,
+subjects:["Biology","Chemeistry"]}])
+
+find all document or find all:
+db.students.find()
+
+find with conditions:
+db.students.find({age:{$gt:20}})
+
+pretty print results:
+db.students.find().pretty()
+
+find one :
+db.students.findOne({name:"Ramya"})
+
+update one :
+db.students.updateOne({name:"Ramya"},
+{$set:{age:25}})
+
+update many:
+db.students.updateMany(
+  {age:{$gt:20}},
+  {$inc:{age:1}}
+)
+
+delete one:
+db.students.deleteOne({name:"Sam"})
+db.students.deleteOne({name:"Sam"})
+
+deletr many:
+db.students.deleteMany({age:{$lt:21}})
