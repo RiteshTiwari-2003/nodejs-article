@@ -78,3 +78,73 @@ unstructured data :in a collection in each document have diffrrent different dat
 
 semi structured data : in this both structured and unstructured both property present and depending on data source and coming data from source 
 polymorphic data ; depending on data types or subtypes 
+
+### no sql database system include a wide varity of database technologies that can store structured , semi structured, un structured polymorphic data 
+
+No sql considered to be an approach to database design that can hold wide variety of data modals including key value , documents , colummnar and graph format 
+
+types of nosql:
+1. key value database:
+key value database stores data as a collection of key value pairs in which a key serves as a unique identifier 
+the key in key-value pair must be unique , this is the unique identifier that allows you to access the value associated with that key 
+
+2. columnar database :
+a columnar database stores data in columns rather than row 
+the main aim of columnar database is to efficiently write and read data to and from hard disk storage in order to speed up the time it takes to return a query 
+
+### graph database:
+graph data stores assemble the data as nodes, which are like records in a relational database , and edge , which represent connection between nodes.
+
+each node represent an entity 9a person , place, thing , category or other piece of data ) and each relationship represents how two nodes are associated .
+
+#### benifit of no sql :
+Elastic scaling 
+avoid join 
+no need for data to fit a schema 
+quick and easy development 
+ability to cope with network failure
+low latency and high performance 
+support multiple data structure 
+less management 
+
+#### differnece between rdbms and no sql 
+rdbms :
+primarily known as relational database management system 
+nosql:
+primarily known for non relational database management system 
+
+rdbms:
+database are table based 
+nosql:
+database are document based , key value paired , graph database or columnar stores 
+
+rdbms :
+have predefined schema 
+nosql:
+have dynamic schema for unstructured data 
+
+rdbms:
+database are not best fit for heirarchical data storage 
+nosql:
+database fits better for hierarchical data storage 
+
+rdbms:
+ex: mysql, oracle, sqlite, mssql etc.
+nosql:
+mongodb , bigtable cassandra neo4j 
+
+
+#### document database ;
+it is a modern apprach to store data in json format rather than tables . it allows you to display the data in its original form the way it's intended to be.
+
+document store database store  each record  and its associated data with in a single document 
+
+### graph database:
+graph database are nosql database that use the graph data model composed of points, which is an entity like a person , place , object or appropriate peice of data and edge ,which symbolize the relationship between two nodes 
+
+#### mongo db 
+mongo db is considered to be an open source non relational database management system that uses a document orieneted database model that support various structure of data.
+mongodb's document model is simple for developers to learn and use.while still providing all the capability needed to meet the most complex requirement at any scale .
+so whats happeninternally structure ?
+
+mongo db will not the save the data in json format , internally it saves in the extended json format which is bson format(binary json format) 
