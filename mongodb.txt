@@ -235,3 +235,31 @@ db.students.deleteOne({name:"Sam"})
 
 deletr many:
 db.students.deleteMany({age:{$lt:21}})
+
+create index :
+db.students.createIndex({name:1})
+
+view indexs:
+db.students.getIndexs()
+
+#### drop a collection 
+db.students.drop()
+
+drop the database"
+db.dropDatabase()
+
+in mongo a database can not exist without a single collection
+
+now use another database which present in local like 
+use riteshtiwari3112003
+
+now create collection 
+db.createCollection("student")
+
+#### logical 
+db.students.find({
+  $and:[
+    {age:{$gt:20}},
+    {subject:"math"}
+  ]
+})
