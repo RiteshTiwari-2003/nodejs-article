@@ -178,8 +178,8 @@ in mongo sheel all command and when they run then what output produce all list b
 list all database:
 show dbs 
 
-create/select a database:
-use school
+create/select a database:                                     element chack:
+use school                                                    db.students.find({address:{$exist:true}})
 
 check current database:
 db
@@ -263,3 +263,23 @@ db.students.find({
     {subject:"math"}
   ]
 })
+
+### read operation 
+you can spacify the query filter that identify the documents to return 
+db.operate.find().limit(2)
+
+#### what is objectId in mongodb ?
+ObjectId is default type for the _id field, it is 12 byte value , that is unique and encode timestamp , machine id, process id, process id, and counter. it is uniquly identifiesas document 
+
+### what is mongo db aggregation framework ?
+a pipeline based framework used to process and transform data , you define stages like :
+$match - filter 
+$group - grouping 
+$project- shape output 
+$sort , $limit    :   example 
+
+db.orders.aggregate([
+  {$match:{status:'completed'}},
+  {$group:{_id:'$userId',total:{$sum:'$amount'}}}
+])
+
