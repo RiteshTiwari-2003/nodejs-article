@@ -31,3 +31,40 @@ db.datatypes.insertOne({
 db.examples.insertOne({
     hobbies:["reading:,"coding","traveling"];
 });///arrays
+like till now like whatever data type you inserted as document automatically for each objectId create but nelow for this data type you can create your own ObjectID 
+db.examples.insertOne({
+    _id:ObjectId('5f5f5f5fffg6g6g6'),
+    name:"withcustomId'
+})
+db.example.insertOne({
+    name:"AutoId"
+})
+db.exampe.insertOne({
+    file:new BinData(0,'dhdhdhd')
+});//binary data (Base64 incoded "hello World")
+
+db.examples.insertOne({
+    pattern:/abc/i
+})//regular expression 
+db.exampers.insertOne({
+    minkey:MinKey()
+});//minkey
+db.examples.insertOne({
+    maxkey:MaxKey()
+})
+///lets say if you want to find documents with a value >= the minimum possible value 
+db.examples.find({value:{$gte:MinKey()}})
+it can be also saves javascript function in document 
+db.examples.insertOne({
+    calc:function(){
+        return 4+5;
+    }
+})
+
+db.examples.insertOne({
+    vikram:{
+        $code:"return x+y;",
+        $scope:{x:1,y:2}
+
+    }
+})// it is not running the function just saving a function with scope 
