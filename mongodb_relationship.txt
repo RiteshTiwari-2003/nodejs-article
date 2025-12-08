@@ -1,0 +1,33 @@
+#### mongo db relation ship:
+no sql database are document oriented that is there are no table, so relationship are drawn between document objects, in mongodb 
+you can create a relation ship using the following method 
+
+1. embedded 
+..one to one 
+..one to many 
+
+2. referenced 
+one to many 
+
+mondo db datatype example :
+db.datatypes.insertOne({name:"Alice"}); //String 
+db.datatypes.insertOne({age:21});//Int32
+db.datatypes.insertOne({bigNumber:NumberLong("12345678")});
+db.datatypes.insertOne({rating:4.5})
+db.datatypes.insertOne({price:NumberDecimal("99.99")});
+db.datatypes.insertOne({isActive:true});
+db.datatypes.insertOne({middlename:null});
+db.datatypes.insertOne({createAt:new Date()});
+db.datatypes.insertOne({ts:Timestamp()});
+db.datatypes.insertOne({
+    user:{
+        firstname:"ritesh",
+        lastname:"tiwari"
+    }
+})
+
+//object
+
+db.examples.insertOne({
+    hobbies:["reading:,"coding","traveling"];
+});///arrays
