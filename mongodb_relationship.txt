@@ -71,3 +71,13 @@ db.examples.insertOne({
 
 what is domain name ?
 domain name system is basically translate the domain into the server's ip address 
+
+### difference between http and https:
+http stand for hypertext transfer protocal and is used for transmitting data over web 
+
+it define how request and response should look and how the server should handle them 
+https is the secure version of http , using ssl/tls encryption to protect data during transmission 
+
+the browser sends an http/https request to the server for a specific resources 
+
+there are different different httpmethod like get , post , delete , put, patch 
