@@ -68,3 +68,6 @@ db.examples.insertOne({
 
     }
 })// it is not running the function just saving a function with scope 
+
+what is domain name ?
+domain name system is basically translate the domain into the server's ip address 
