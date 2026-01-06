@@ -1,0 +1,16 @@
+### express js 
+express js is the minimal and flexible web application framework for node js based on the http module 
+
+it simplify routing , middleware , and handling http request in node js application 
+
+it is extremly populer with the wide community support 
+
+import express from 'express";
+const app=express();
+app.get('/',(req,res)=>{
+    res.send("<h1>Hello World!</h1>")
+})
+const PORT=3000;
+app.listen(PORT,()=>{
+    console.log(`server is running on this ${PORT}`)
+})
